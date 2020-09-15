@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>resTEK</title>
+  <meta content="" name="descriptison">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Raleway:300,400,500,700,800|Montserrat:300,400,700"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Reveal - v2.1.0
+  * Template URL: https://bootstrapmade.com/reveal-bootstrap-corporate-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <script src="http://code.jquery.com/jquery-2.0.3.min.js" data-semver="2.0.3" data-require="jquery"></script>
+  <script type="text/javascript" src="http://www.appelsiini.net/projects/chained/jquery.chained.js?v=0.9.10"></script>
+  <script src="script.js"></script>
+  <script src="dropdown.js"></script>
+</head>
+
+<body>
+
+  <header id="header">
+    <div class="container">
+
+      <div id="logo" class="pull-left">
+        <h1><a href="index.html">res<span>TEK</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt=""></a>-->
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li><a href="index.html">Bản đồ</a></li>
+          <li><a href="index1.html">Dự đoán</a></li>
+          <li class="menu-active"><a href="index2.html">Tìm kiếm</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- End Header -->
+
+  <div class="col-md-4">
+    <div class="form-group">
+      <!-- <label>Quận/Huyện</label> -->
+      <!-- <select id="district" class="form-control select2" style="width: 100%;">
+        <option value="Hà Đông">Hà Đông</option>
+        <option value="Long Biên">Long Biên</option>
+        <option value="Thanh Xuân">Thanh Xuân</option>
+        <option value="Đống Đa">Đống Đa</option>
+        <option value="Ba Đình">Ba Đình</option>
+        <option value="Tây Hồ">Tây Hồ</option>
+        <option value="Hoàn Kiếm">Hoàn Kiếm</option>
+      </select> -->
+      Quận/Huyện: <select class="form-control" style="width:100%;" name="district" id="district">
+        <option value="" selected="selected">Chọn quận/huyện</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="form-group">
+      Phường/Xã: <select name="ward" id="ward" class="form-control" style="width:100%;">
+        <option value="" selected="selected">Vui lòng chọn quận/huyện trước</option>
+      </select>
+      <!-- <label>Phường/Xã</label>
+      <select id="ward" class="form-control select2" style="width: 100%;">
+        <option selected="selected">La Khê</option>
+        <option value="hadong" class="Hà Đông">Phú La</option>
+        <option value="hadong" class="Hà Đông">Phú Lãm</option>
+        <option value="hadong" class="Hà Đông">Kiến Hưng</option>
+        <option  class="Hà Đông">Nguyễn Trãi</option>
+        <option value="hadong" class="Hà Đông">Vạn Phúc</option>
+        <option value="hadong" class="Hà Đông">Yên Nghĩa</option>
+        <option value="tayho" class="Tây Hồ">Phú Thượng</option>
+        <option value="tayho" class="Tây Hồ">Nhật Tân</option>
+        <option value="tayho" class="Tây Hồ">Tứ Liên</option>
+        <option value="tayho" class="Tây Hồ">Quảng An</option>
+        <option value="tayho" class="Tây Hồ">Xuân La</option>
+        <option value="tayho" class="Tây Hồ">Yên Phụ</option>
+      </select> -->
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <div class="form-group">
+      <label>Số phòng ngủ</label>
+      <select id="bedroom" class="form-control select2" style="width: 100%;">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="col-md-4">
+    <label>Diện tích</label>
+    <input id="square" type="text">
+  </div>
+  <div class="col-md-4">
+    <label>Something</label>
+    <input id="something" type="text">
+  </div>
+  <button type="button" onclick="sudosubmit()">Search</button>
+  <p id="demo"></p>
+
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/wow/wow.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+  <script src="assets/vendor/superfish/superfish.min.js"></script>
+  <script src="assets/vendor/hoverIntent/hoverIntent.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
