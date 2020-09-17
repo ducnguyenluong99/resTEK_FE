@@ -15,7 +15,7 @@ var subjectObject = {
         if (this.selectedIndex < 1)
         return; // done
       //display correct values
-      for (var y in subjectObject[this.value]) {
+      for (var y of subjectObject[this.value]) {
         ward.options[ward.options.length] = new Option(y, y);
       }
     }
